@@ -19,7 +19,7 @@ button {
  }
 
  div{
-     font-family:Arial,Helvetica, sans-serif;
+     font-family:'Courier New', Courier, monospace;
      padding:1rem ;
      height:100%
  }
