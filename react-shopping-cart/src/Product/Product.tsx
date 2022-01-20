@@ -16,10 +16,10 @@ const Product: React.FC<Props> = ({product, handleAddToCart}) =>(
             <h3>{product.title}</h3>
             <p>{product.description}</p>
             <h4>€{product.price}</h4>
-            <p>{product.rating}</p>
+            {/* <p>{product.rating}</p> */}
 
         </div>
-        <Button onClick={()=>handleAddToCart(product) } >Add to Cart</Button>
+        <Button onClick={()=>handleAddToCart(product) }  >Add to Cart</Button>
     </Wrapper>
 );
 export default Product

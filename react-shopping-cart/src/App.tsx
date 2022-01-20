@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 //component
 import { Drawer, Grid, Badge, CircularProgress } from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons';
-import Product from './Product/Prduct';
+import Product from './Product/Product';
 //styles
 import { Wrapper } from './App.styles';
 import './App.css';
@@ -16,7 +16,7 @@ export type CartItemType={
   price:number;
   title:string;
   amount:number;
-  rating:number;
+  // rating:number[];
 
 }
 
@@ -37,12 +37,18 @@ function App() {
 
   if(isLoading) return < CircularProgress  />
 
-  if(error) return <div> Something went wrong ..</div>
+  if(error) return <div> Something went wrong ...</div>
   
   return (
-    <div className="App">
-    Start
-    </div>
+   <Wrapper>
+     <Grid container spacing={3}>
+       {data?.map( product=>(
+         <Grid item key={product.id} xs={ 12 } sm={ 4 } >
+           <Product product={product} handleAddToCart={handleAddToCart}/>
+         </Grid>
+       ))}
+     </Grid>
+   </Wrapper>
   );
 }
 
