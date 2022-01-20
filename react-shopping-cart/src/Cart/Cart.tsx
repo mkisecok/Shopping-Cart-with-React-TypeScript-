@@ -8,6 +8,8 @@ type Props={
     removeFromCart:(id:number)=>void;
 }
 const Cart:React.FC<Props> =({cartItems, addToCart, removeFromCart}) =>{
+
+    
     return(
         <Wrapped>
             <h2>Your Shopping Cart</h2>

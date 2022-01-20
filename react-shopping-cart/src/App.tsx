@@ -34,7 +34,7 @@ function App() {
 
   const getTotalItems = (items:CartItemType[]) => 
 
-    items.reduce((ack:number, item) => ack + item.amount, 0);
+    items.reduce((acc:number, item) => acc + item.amount, 0);
   
 
   const handleAddToCart = (clickedProduct:CartItemType) => {
@@ -54,7 +54,21 @@ function App() {
     })
   };
 
-  const handleRemoveFromCart = () => null;
+  const handleRemoveFromCart = (id:number) => {
+    setCartProducts(prev=>(
+      prev.reduce((acc,item)=>{
+        if(item.id === id){
+          if(item.amount === 1) return acc;
+          return [...acc, {...item, amount:item.amount-1}];
+
+        }else{
+          return [...acc,item]
+        }
+      },  [] as CartItemType[])
+     
+    
+    ));
+  };
 
   if(isLoading) return < CircularProgress  />
 
