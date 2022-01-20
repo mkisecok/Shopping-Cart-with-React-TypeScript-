@@ -37,7 +37,22 @@ function App() {
     items.reduce((ack:number, item) => ack + item.amount, 0);
   
 
-  const handleAddToCart = (clickedProduct:CartItemType) => null;
+  const handleAddToCart = (clickedProduct:CartItemType) => {
+    setCartProducts(prev=>{
+      // is the product already in the cart
+      const isProductIn=prev.find(item=>  item.id===clickedProduct.id)
+      if(isProductIn){
+        return prev.map(item=>(
+          item.id===clickedProduct.id
+          ?
+          {...item, amount:item.amount+1}
+          :item
+        ))
+      }
+      // first time the item is added
+      return[...prev, {...clickedProduct,amount:1}];
+    })
+  };
 
   const handleRemoveFromCart = () => null;
 
