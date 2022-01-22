@@ -12,7 +12,9 @@ div{
 .information,
 .buttons{
     display:flex;
-    justify-content:space-between;}
+    justify-content:space-between;
+    font-weight:bold;
+}
 img{
         max-width:80px;
         object-fit:cover;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 display:flex;
+font-family:'Courier New', Courier, monospace;
 justify-content:space-between;
 flex-direction:column;
 width:100%;
@@ -10,7 +11,7 @@ border-radius:10px;
 height:100%;
 
 button { 
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px;
  }
  img{
      max-height:250px;
@@ -19,8 +20,19 @@ button {
  }
 
  div{
-     font-family:'Courier New', Courier, monospace;
+    
      padding:1rem ;
-     height:100%
+     height:100%;
+     display:flex;
+     flex-direction:column;
+   
+     
+    
+ }
+ h4{
+    color:green;
+    align-self:flex-end;
+    justify-self:flex-end;
+    padding:1rem ;
  }
 `;
