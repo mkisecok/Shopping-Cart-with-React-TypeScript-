@@ -2,7 +2,7 @@
 
 - Used TypeScript in this project
 - Material UI library integrated in Components
-- Styled without Material UI with styled-components npm module instead of CSS3
+- Styled Material UI with styled-components npm module instead of seperate css file
 - Used useQuery hooks of react for fetching a data
 - For the data used Fake Api 
 
