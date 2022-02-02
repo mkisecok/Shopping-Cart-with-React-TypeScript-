@@ -17,7 +17,7 @@ export type CartItemType={
   price:number;
   title:string;
   amount:number;
-  // rating:number[];
+  
 
 }
 
@@ -100,5 +100,6 @@ function App() {
    </Wrapper>
   );
 }
+
 
 export default App;
